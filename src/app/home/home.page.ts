@@ -33,8 +33,7 @@ export class HomePage {
     await modal.present();
 
     modal.onDidDismiss().then((retorno) => {
-      console.log(retorno);
-
+      this.add(retorno.data);
 
       //this.add(retorno.data)
       // Quando o modal foi dispensado os valores retornados será jogado na variável RETORNO, logo em seguinta
@@ -46,7 +45,6 @@ export class HomePage {
 
       //Ex dos dados retornados: {'data':'retorno':{nome:jack, perfil:paz e amor,url:google.com}}
     })
-
   }
 
   alunos = []
