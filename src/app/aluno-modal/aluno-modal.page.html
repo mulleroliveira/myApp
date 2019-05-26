@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-label>Nome: </ion-label>
+      <ion-input [(ngModel)]="novo_aluno.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Perfil: </ion-label>
+      <ion-input [(ngModel)]="novo_aluno.perfil"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Url: </ion-label>
+      <ion-input [(ngModel)]="novo_aluno.url"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="add()">Vai</ion-button>
+
+  </ion-card>
+
+</ion-content>
