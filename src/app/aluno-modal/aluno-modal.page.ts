@@ -8,19 +8,21 @@ import { ModalController } from '@ionic/angular';
 })
 export class AlunoModalPage implements OnInit {
 
-  constructor(public modalController:ModalController) { }
-  
+  constructor(public modalController: ModalController) { }
+
   ngOnInit() {
   }
 
   novo_aluno = {
-    "nome":"",
-    "perfil":"",
-    "url":""
+    "nome": "",
+    "perfil": "",
+    "url": ""
   }
 
   add() {
     this.modalController.dismiss(this.novo_aluno)
+    // Quando o cara apertar em "Vai" e o modal fechar, irá retornar o objeto 
+    //novo_aluno com os dados preenchidos.
+    // dismiss | Dispensar.
   }
-
 }

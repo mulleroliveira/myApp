@@ -33,7 +33,18 @@ export class HomePage {
     await modal.present();
 
     modal.onDidDismiss().then((retorno) => {
-      this.add(retorno.data)
+      console.log(retorno);
+
+
+      //this.add(retorno.data)
+      // Quando o modal foi dispensado os valores retornados será jogado na variável RETORNO, logo em seguinta
+      // será executado o comando de baixo, no qual irá jogar os valores para a Função add().
+
+      // O (.Data) é por causa que os valores retornados vem dentro de um 'Dicionário' com a chave [data],
+      //portanto é preciso colocar o nome da variável (retorno).data(que é o nome do dicionário) para acessar
+      // os dados enviados pelo Modal.
+
+      //Ex dos dados retornados: {'data':'retorno':{nome:jack, perfil:paz e amor,url:google.com}}
     })
 
   }
